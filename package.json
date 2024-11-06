@@ -18,6 +18,11 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@schedule-x/angular": "^2.3.1",
+    "@schedule-x/calendar": "^2.4.2",
+    "@schedule-x/events-service": "^2.4.2",
+    "@schedule-x/theme-default": "^2.4.2",
+    "@sx-premium/interactive-event-modal": "^1.5.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

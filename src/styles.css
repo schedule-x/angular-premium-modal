@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.ng-calendar-wrapper {
+  height: 800px;
+  width: 1200px;
+  max-width: 90vw;
+}
