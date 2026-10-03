@@ -4,8 +4,7 @@ import { CalendarComponent } from "@schedule-x/angular";
 import { createCalendar, createViewWeek } from "@schedule-x/calendar";
 import {createInteractiveEventModal} from "@sx-premium/interactive-event-modal";
 import {createEventsServicePlugin} from "@schedule-x/events-service"; // can alternatively be added in your angular.json
-import '@schedule-x/theme-default/dist/index.css'
-import '@sx-premium/interactive-event-modal/index.css'
+import 'temporal-polyfill/global';
 
 const eventsService = createEventsServicePlugin();
 
@@ -44,11 +43,13 @@ export class AppComponent {
       {
         id: '1',
         title: 'Event 1',
-        start: '2024-11-08 03:00',
-        end: '2024-11-08 05:00',
+        start: Temporal.ZonedDateTime.from('2024-11-08T03:00:00+00:00[UTC]'),
+        end: Temporal.ZonedDateTime.from('2024-11-08T05:00:00+00:00[UTC]'),
       },
     ],
 
+    selectedDate: Temporal.PlainDate.from('2024-11-08'),
+    timezone: 'UTC',
     views: [createViewWeek()],
 
     plugins: [
